@@ -8,14 +8,13 @@ spec:
   # Service => network endpoint pra outros services ou uso externo (ex: browser)
   selector:
     app: webapp
-    release: "0-5"
   ports:
     - name: http
       port: 80
       # targetPort: 80
       nodePort: 30080 # deve ser maior que 30k
   # Tipos diferentes de services
-  type: NodePort #outras opçoes: LoadBalancer ou ClusterIP
+  type: NodePort # outras opçoes: LoadBalancer ou ClusterIP
 
 ---
 apiVersion: v1
