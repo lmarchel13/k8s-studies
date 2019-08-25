@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: webapp
   replicas: 2
-  minReadySeconds: 30
+  # minReadySeconds: 10
   template: # template do pod
     metadata:
       # pod não precisa de um nome
