@@ -44,5 +44,20 @@ spec:
   ports:
     - name: http
       port: 8080
-      nodePort: 30020
+  type: ClusterIP
+
+---
+# API Gateway
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-api-gateway
+spec:
+  selector:
+    app: api-gateway
+  ports:
+    - name: http
+      port: 8080
+      nodePort: 30000
   type: NodePort
