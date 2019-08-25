@@ -1,3 +1,5 @@
+# Queue
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +19,8 @@ spec:
           image: richardchesterwood/k8s-fleetman-queue:release1
 
 ---
+# Position Simulator
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -39,8 +43,8 @@ spec:
               value: production-microservice
 
 ---
+# Position Tracker
 
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -61,6 +65,3 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: production-microservice
-
----
-
