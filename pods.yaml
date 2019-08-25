@@ -1,3 +1,5 @@
+# WebApp
+
 apiVersion: v1
 kind: Pod
 metadata: # Pod name
@@ -17,8 +19,23 @@ metadata:
   name: webapp-release-0-5
   labels:
     app: webapp
-    release: 0-5
+    release: "0-5"
 spec:
   containers:
     - name: webapp
       image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+
+---
+#Queue
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: queue
+  labels:
+    app: queue
+    release: "0"
+spec:
+  containers:
+    - name: queue
+      image: richardchesterwood/k8s-fleetman-queue:release1
