@@ -16,3 +16,17 @@ spec:
       nodePort: 30080 # deve ser maior que 30k
   # Tipos diferentes de services
   type: NodePort #outras opçoes: LoadBalancer ou ClusterIP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-queue
+spec:
+  selector:
+    app: queue
+  ports:
+    - name: http
+      port: 8161
+      nodePort: 30010
+  type: NodePort
