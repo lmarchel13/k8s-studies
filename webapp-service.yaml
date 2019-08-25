@@ -8,6 +8,7 @@ spec:
   # Service => network endpoint pra outros services ou uso externo (ex: browser)
   selector:
     app: webapp
+    release: "0-5"
   ports:
     - name: http
       port: 80
