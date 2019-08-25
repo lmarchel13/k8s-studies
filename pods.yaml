@@ -1,14 +1,14 @@
 # WebApp
-
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: webapp
 spec:
   selector:
     matchLabels:
       app: webapp
-  replicas: 1
+  replicas: 2
+  minReadySeconds: 30
   template: # template do pod
     metadata:
       # pod não precisa de um nome
